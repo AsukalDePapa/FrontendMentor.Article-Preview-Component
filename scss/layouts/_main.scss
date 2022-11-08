@@ -28,13 +28,13 @@ article:first-child {
     // background-color: red !important;
     img {
         width: 100%;
-        border-radius: f.rem(16) f.rem(16) 0 0;
+        border-radius: f.rem(12) f.rem(12) 0 0;
     }
 
     @include bp.breakpointMin(medium) {
         img {
             height: 100%;
-            border-radius: f.rem(16) 0 0 f.rem(16);
+            border-radius: f.rem(12) 0 0 f.rem(12);
         }
     }
 }
@@ -135,7 +135,7 @@ article:nth-child(2) {
         right: 0;
         left: 0;
         background-color: var(--share-link-bg);
-        border-radius: 0 0 f.rem(16) f.rem(16);
+        border-radius: 0 0 f.rem(12) f.rem(12);
         padding: f.rem(32);
         width: 100%;
 
@@ -163,7 +163,7 @@ article:nth-child(2) {
             width: 300px;
             width: fit-content;
             padding: f.rem(16) f.rem(32);
-            border-radius: f.rem(16);
+            border-radius: f.rem(12);
         }
 
         @include bp.breakpointMin(medium) {
