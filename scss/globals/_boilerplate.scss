@@ -1,0 +1,26 @@
+@use '../utils/functions' as f;
+@use '../utils/breakpoints' as bp;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: f.rem(100) 0;
+    background-color: var(--bg-clr);
+    font-family: var(--ff-manrope);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

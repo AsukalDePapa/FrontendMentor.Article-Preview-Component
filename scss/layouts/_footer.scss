@@ -1,0 +1,16 @@
+@use '../utils/functions' as f;
+
+footer {
+    position: absolute;
+    bottom: f.rem(10);
+    right: 0;
+    left: 0;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

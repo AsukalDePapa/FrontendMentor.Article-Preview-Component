@@ -1,0 +1,18 @@
+@use '../utils/functions' as f;
+
+h2 {
+    margin: 0;
+    font-size: f.rem(18);
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+    font-size: f.rem(13);
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}

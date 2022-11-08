@@ -1,0 +1,122 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/functions' as f;
+
+main {
+    position: relative;
+    background-color: var(--main-clr);
+    width: min(90%, f.rem(365));
+    margin-inline: auto;
+    border-radius: f.rem(12);
+}
+
+article:first-child {
+    // background-color: red !important;
+    img {
+        width: 100%;
+        height: f.rem(250);
+        border-radius: f.rem(12) f.rem(12) 0 0;
+    }
+}
+
+article:nth-child(2) {
+    // background-color: red !important;
+    position: relative;
+
+    .information {
+        padding: f.rem(32) f.rem(50);
+        h2 {
+            color: var(--head-txt-clr);
+            margin-bottom: f.rem(16);
+        }
+    
+        p {
+            color: var(--sub-txt-clr);
+            text-align: left;
+            line-height: 1.6;
+            word-spacing: f.rem(1);
+        }
+    }
+
+    .user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 f.rem(50) f.rem(16);
+    
+        .user-info {
+            display: flex;
+            gap: f.rem(16);
+            align-items: center;
+
+            img {
+                width: f.rem(50);
+                border-radius: 50%;
+            }
+
+            h2 {
+                display: flex;
+                flex-direction: column;
+                gap: f.rem(3);
+                font-size: f.rem(13);
+                color: var(--head-txt-clr);
+            }
+
+            span {
+                color: hsl(212, 23%, 69%);
+                font-size: f.rem(13);
+            }
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            position: relative;
+            padding: 7px;
+            border-radius: 50%;
+
+            svg {
+                fill: hsl(214, 17%, 51%);
+            }
+        }
+
+        .button {
+            background-color: hsl(214, 17%, 51%);
+
+            svg {
+                fill: whitesmoke;
+            }
+        }
+    }
+
+    .share-links {
+        // display: block;
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: hsl(217, 19%, 35%);
+        padding: 32px;
+        width: 100%;
+        border-radius: 0 0 f.rem(12) f.rem(12);
+
+        .socials {
+            display: flex;
+            align-items: center;
+            gap: f.rem(16);
+
+            p {
+                font-size: f.rem(14);
+                font-weight: 700;
+                color: var(--sub-txt-clr);
+                text-transform: uppercase;
+                letter-spacing: f.rem(5);
+                margin-right: f.rem(12);
+            }
+        }
+    }
+
+    .share-links-show {
+        display: block;
+    }
+}
