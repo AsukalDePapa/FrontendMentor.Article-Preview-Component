@@ -72,12 +72,12 @@ article:first-child {
 }
 article:first-child img {
   width: 100%;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 0.75rem 0.75rem 0 0;
 }
 @media (min-width: 48.75em) {
   article:first-child img {
     height: 100%;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0.75rem 0 0 0.75rem;
   }
 }
 
@@ -160,7 +160,7 @@ article:nth-child(2) .share-links {
   right: 0;
   left: 0;
   background-color: var(--share-link-bg);
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 0.75rem 0.75rem;
   padding: 2rem;
   width: 100%;
 }
@@ -188,7 +188,7 @@ article:nth-child(2) .share-links .socials p {
     width: -moz-fit-content;
     width: fit-content;
     padding: 1rem 2rem;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
   }
 }
 @media (min-width: 48.75em) {
