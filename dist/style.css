@@ -4,6 +4,9 @@
   --main-clr: hsl(0, 0%, 96%);
   --head-txt-clr: hsl(217, 19%, 35%);
   --sub-txt-clr: hsl(214, 17%, 51%);
+  --share-link-bg: hsl(217, 19%, 35%);
+  --share-link-clr: hsl(212, 23%, 69%);
+  --link-clr: hsl(217, 19%, 35%);
 }
 
 html {
@@ -53,15 +56,33 @@ main {
   width: min(90%, 22.8125rem);
   margin-inline: auto;
   border-radius: 0.75rem;
+  display: grid;
+  grid-template-areas: "backgroundImage" "productInformation";
+}
+@media (min-width: 48.75em) {
+  main {
+    width: min(90%, 57.5rem);
+    grid-template-columns: 0.75fr 1fr;
+    grid-template-areas: "backgroundImage productInformation";
+  }
 }
 
+article:first-child {
+  grid-area: backgroundImage;
+}
 article:first-child img {
   width: 100%;
-  height: 15.625rem;
-  border-radius: 0.75rem 0.75rem 0 0;
+  border-radius: 1rem 1rem 0 0;
+}
+@media (min-width: 48.75em) {
+  article:first-child img {
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
 }
 
 article:nth-child(2) {
+  grid-area: productInformation;
   position: relative;
 }
 article:nth-child(2) .information {
@@ -76,6 +97,14 @@ article:nth-child(2) .information p {
   text-align: left;
   line-height: 1.6;
   word-spacing: 0.0625rem;
+}
+@media (min-width: 48.75em) {
+  article:nth-child(2) h2 {
+    font-size: 1.5rem;
+  }
+  article:nth-child(2) p {
+    font-size: 0.9375rem;
+  }
 }
 article:nth-child(2) .user {
   display: flex;
@@ -119,16 +148,21 @@ article:nth-child(2) .user .button {
 article:nth-child(2) .user .button svg {
   fill: whitesmoke;
 }
+@media (min-width: 48.75em) {
+  article:nth-child(2) .user .user-info {
+    padding-bottom: 16px;
+  }
+}
 article:nth-child(2) .share-links {
   display: none;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: hsl(217deg, 19%, 35%);
-  padding: 32px;
+  background-color: var(--share-link-bg);
+  border-radius: 0 0 1rem 1rem;
+  padding: 2rem;
   width: 100%;
-  border-radius: 0 0 0.75rem 0.75rem;
 }
 article:nth-child(2) .share-links .socials {
   display: flex;
@@ -138,10 +172,41 @@ article:nth-child(2) .share-links .socials {
 article:nth-child(2) .share-links .socials p {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--sub-txt-clr);
+  color: var(--share-link-clr);
   text-transform: uppercase;
   letter-spacing: 0.3125rem;
   margin-right: 0.75rem;
+}
+@media (min-width: 43.749375em) {
+  article:nth-child(2) .share-links {
+    position: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    width: 300px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+}
+@media (min-width: 48.75em) {
+  article:nth-child(2) .share-links {
+    position: absolute;
+    bottom: 5.3125rem;
+    right: -3.4375rem;
+  }
+  article:nth-child(2) .share-links::after {
+    content: "";
+    background-color: var(--share-link-bg);
+    width: 0.9375rem;
+    height: 0.9375rem;
+    position: absolute;
+    bottom: -0.4375rem;
+    left: 50%;
+    rotate: 45deg;
+  }
 }
 article:nth-child(2) .share-links-show {
   display: block;
@@ -155,10 +220,37 @@ footer {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.75rem;
   text-align: center;
+  color: var(--link-clr);
 }
-
 .attribution a {
+  font-size: 0.875rem;
   color: hsl(228deg, 45%, 44%);
+  color: var(--link-clr);
+  font-weight: 700;
+  position: relative;
+}
+.attribution a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 0;
+  height: 2px;
+  background-color: var(--link-clr);
+  transition: width 0.3s ease-in;
+}
+.attribution a:hover::after {
+  width: 100%;
+}
+@media (min-width: 48.75em) {
+  .attribution {
+    font-size: 0.875rem;
+  }
+  .attribution a {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
