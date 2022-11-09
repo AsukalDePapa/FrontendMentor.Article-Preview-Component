@@ -1,7 +1,7 @@
 @use 'functions' as f;
 
 $breakpoint-min: (
-    'smol': f.em(779.99),
+    'smol': f.em(779.98),
     'medium': f.em(780)
 );  
 
@@ -9,4 +9,4 @@ $breakpoint-min: (
     @media (min-width: map-get($breakpoint-min, $size)) {
         @content;
     }
-}
+};

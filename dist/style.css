@@ -177,7 +177,7 @@ article:nth-child(2) .share-links .socials p {
   letter-spacing: 0.3125rem;
   margin-right: 0.75rem;
 }
-@media (min-width: 48.749375em) {
+@media (min-width: 48.74875em) {
   article:nth-child(2) .share-links {
     position: unset;
     bottom: unset;
